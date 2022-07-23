@@ -1,0 +1,60 @@
+Frontend
+- React
+- Angular
+- Vue
+- Svelte
+- Raw HTML
+- Tailwind?
+
+Backend
+- Javascript (express or fullstack framework)
+- Python (flask, django)
+- Java (spring)
+- Ruby (rails)
+- Larvell (PHP)
+
+Database
+- SQL
+	- Postrges
+	- Sqlite
+    - Cockroach
+- NoSQL
+	- MongoDB
+	- Firestore (both types)
+- Other
+	- Redis
+
+Hosting solutions
+- Heroku
+- Vercel
+- Firebase cloud functions
+- Github Pages (if not need server)
+- Firebase hosting
+- Vultr
+- AWS
+
+How am I gonna get this to work?
+1. Get Started
+	- How much coding experience do you have? (1-5)
+	- How much time do you have? (options)
+	- How open are you to learning new technologies? (1-5)
+	- What is your budget? (free, little, medium, as much as needed)
+	- Will your app need to store data that can be accessed among multiple clients?
+	- Will your app need to authenticate users
+	- Does your app require realtime updates?
+2. Code comfort
+	- Select languages comfortable with
+	- How good are you at each?
+	- How comfortable are you with HTML 
+	- How comfortable are you with CSS (decides tailwind or not)
+3. Front-end
+	- How familiar are you with the following frameworks?
+	- How complicated would you like your app to be? (static, some reactive elements, constantly changing data)
+4. Backend
+	- How familiar are you with the following framework(s)?
+5. Database
+	- Do you know SQL?
+	- How familiar are you with the following databases?
+	- Which better describes your app? (more reads than writes, more writes than reads)
+6. Other
+	- 
