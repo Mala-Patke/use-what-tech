@@ -12,10 +12,10 @@ const stylesheet = `
     background-color: #68c5ff7a;
 }`;
 
-function ifImageExists(src, load, error) {
+function ifImageExists(src, load) {
     let img = new Image();
     img.addEventListener('load', load);
-    img.addEventListener('error', error);
+    img.addEventListener('error', e => e.preventDefault());
     img.src = src;
 }
 
@@ -43,8 +43,10 @@ class Select extends HTMLElement {
                 ifImageExists(`../assets/${value.toLowerCase()}.png`,
                     () => {
                         $(document.createElement('img'))
-                        .attr('src', `../assets/${value.toLowerCase()}.png`)
-                        .appendTo(button);    
+                            .attr('src', `../assets/${value.toLowerCase()}.png`)
+                            .attr('width', '50px')
+                            .attr('height', '50px')    
+                            .appendTo(button);    
                     }, (e) => { e.preventDefault(); }
                 );
                 
@@ -81,9 +83,11 @@ class SelectScale extends HTMLElement {
             ifImageExists(`../assets/${thing.toLowerCase()}.png`,
                 () => {
                     $(document.createElement('img'))
-                    .attr('src', `../assets/${thing.toLowerCase()}.png`)
-                    .appendTo(identifier);
-                }, (e) => { e.preventDefault(); }
+                        .attr('src', `../assets/${thing.toLowerCase()}.png`)
+                        .attr('width', '50px')
+                        .attr('height', '50px')
+                        .appendTo(identifier);
+                }
             );
 
             $(document.createElement('p'))
