@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+nav {
+    height: 10%;
+}
+
+#main {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+#prompt {
+    text-align: center;
+}
+
+.generalSelect {
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    padding: 14px 25px;
+    border: 0px;
+    border-radius: 25px;
+}
+
+.generalSelect:hover {
+    background-color: rgb(54, 54, 54);
+}
+
+/* Shadow root styles below */
+
+.selecter {
+    border-radius: 0px;
+    border: 3px solid black;
+    background-color: white;
+    margin: 0px 20px;
+}
+
+.selected {
+    background-color: #68c5ff7a;
+}

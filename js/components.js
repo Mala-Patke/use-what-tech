@@ -24,11 +24,16 @@ class Select extends HTMLElement {
         super();
 
         const shadow = this.attachShadow({mode: 'open'});
-
+        $(document.createElement('style'))
+            .text(stylesheet)
+            .appendTo(shadow);
+        
+        let inc = 0;
         for(let {name, value} of this.attributes) {
             if(name.startsWith('item')) {
                 let button = $(document.createElement('button'))
                     .addClass('selecter')
+                    .attr('order', inc++)
                     .on('click', ({ target }) => {
                         if(target.tagName !== "BUTTON") target = target.parentElement;
                         $(target).siblings('.selected').removeClass('selected')
@@ -47,15 +52,61 @@ class Select extends HTMLElement {
                     .text(value)
                     .appendTo(button);
                 
-                $(document.createElement('style'))
-                    .text(stylesheet)
-                    .appendTo(shadow);
-                    
-
                 $(shadow).append(button);
             }
         }
     }
 }
 
+class SelectScale extends HTMLElement {
+    constructor() {
+        super();
+
+        const shadow = this.attachShadow({mode: 'open'});
+        $(document.createElement('style'))
+            .text(stylesheet)
+            .appendTo(shadow);
+
+        let messages = ["None", "Basic", "Intermediate", "Advanced"];
+
+        for(let {value: thing} of this.attributes) {
+            let wrapper = $(document.createElement('div'))
+                .addClass('row');
+
+            let identifier = $(document.createElement('button'))
+                .addClass('selecter')
+                .appendTo(wrapper);
+
+            
+            ifImageExists(`../assets/${thing.toLowerCase()}.png`,
+                () => {
+                    $(document.createElement('img'))
+                    .attr('src', `../assets/${thing.toLowerCase()}.png`)
+                    .appendTo(identifier);
+                }, (e) => { e.preventDefault(); }
+            );
+
+            $(document.createElement('p'))
+                .text(thing)
+                .appendTo(identifier);
+
+            let inc = 0;
+            for(let message of messages) {
+                $(document.createElement('button'))
+                    .addClass('selecter')
+                    .text(message)
+                    .attr('order', inc++)
+                    .on('click', ({ target }) => {
+                        if(target.tagName !== "BUTTON") target = target.parentElement;
+                        $(target).siblings('.selected').removeClass('selected')
+                        $(target).addClass('selected');
+                    }).appendTo(wrapper);
+            }
+            
+            $(shadow).append(wrapper);
+        } 
+    }
+}
+
 customElements.define('app-select', Select);
+customElements.define('app-selectscale', SelectScale);
