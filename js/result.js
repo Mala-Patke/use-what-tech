@@ -134,34 +134,3 @@ function createResultsPage(results) {
 
 
 }
-
-calcResults({
-    "experience": 0.5,
-    "learning": 0.5,
-    "time": 0.5,
-    "budget": 0,
-    "needsDatabase": 0,
-    "userData": 0,
-    "realtime": 1,
-    "webComfort": {
-        "HTML": 0.6666666666666666,
-        "CSS": 0.6666666666666666,
-        "JavaScript": 1
-    },
-    "frontFrameworkKnowledge": {
-        "react": 0.3333333333333333,
-        "angular": 0,
-        "vue": 0.6666666666666666,
-        "svelte": 0.3333333333333333
-    },
-    "languages": 0,
-    "knowsSQL": 0,
-    "bestDescDB": 0,
-    "DBfamiliarity": {
-        "postgres": 0.3333333333333333,
-        "cockroach": 0,
-        "mongodb": 0,
-        "firestore": 0.6666666666666666,
-        "redis": 0.6666666666666666
-    }
-});
