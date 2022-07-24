@@ -56,5 +56,46 @@ How am I gonna get this to work?
 	- Do you know SQL?
 	- How familiar are you with the following databases?
 	- Which better describes your app? (more reads than writes, more writes than reads)
-6. Other
-	- 
+
+How to calculate
+1. Decide whether app is beginner or advanced
+2. Use language proficiency in HTML and JS to decide frontend framework
+...
+
+Should be SQL?
+Is SQL the best db for the job?
+	if yes do you know SQL?
+		if yes, TRUE
+		if no, are you willing to learn?
+			if yes TRUE
+			if no FALSE
+	if no FALSE
+
+Database
+Should it be SQL? (calc with shouldBeSQL)
+	if yes
+		has server?
+			if yes Postgres
+			if no Cockroach
+	if no
+		has server?
+			if yes is advanced?
+				if yes Postgres
+				if no Redis
+		is hosting firebase?
+			if yes Firestore
+		is hosting vercel?
+			if yes Mongo
+AFTER DECISION
+Do I know this technology?
+	if yes AFFIRM
+	if no, am I willing to learn?
+		if yes, AFFIRM
+		if no, which DB do I know the best?
+			if one, does DB compat?
+				if yes, CHANGE
+				if no, REVERT
+			if multiple, get highest on thing order
+			does DB compat?
+				if yes, CHANGE
+				if no, REVERT

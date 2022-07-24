@@ -10,7 +10,12 @@ const stylesheet = `
 
 .selected {
     background-color: #68c5ff7a;
-}`;
+}
+
+div {
+    display: inline-block;
+}
+`;
 
 function ifImageExists(src, load) {
     let img = new Image();
@@ -46,7 +51,7 @@ class Select extends HTMLElement {
                             .attr('src', `../assets/${value.toLowerCase()}.png`)
                             .attr('width', '50px')
                             .attr('height', '50px')    
-                            .appendTo(button);    
+                            .appendTo(button);
                     }, (e) => { e.preventDefault(); }
                 );
                 

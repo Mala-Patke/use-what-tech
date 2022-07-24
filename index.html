@@ -8,17 +8,20 @@
         <nav>
             <h3>UseWhat.tech</h3>
         </nav>
-        <div id="main">
-            <div id="prompt">
-                <h1><span class="mainText">What should I use to build my project?</span></h1>
-                <span class="subtext">Usewhat.tech tries to answer this question optimally as possible given some details about you and your project</span>
+        <main>
+            <div id="main">
+                <div id="prompt">
+                    <h1><span class="mainText">What should I use to build my project?</span></h1>
+                    <span class="subtext">Usewhat.tech tries to answer this question optimally as possible given some details about you and your project</span>
+                </div>
+                <div id="selections">
+                    <button id="init" class="generalSelect">Click here to begin!</button>
+                </div>
+                <button id="next" class="generalSelect" hidden>Continue</button>
             </div>
-            <div id="selections">
-                <button id="init" class="generalSelect">Click here to begin!</button>
-            </div>
-            <button id="next" class="generalSelect" hidden>Continue</button>
-        </div>
+        </main>
         <script src="./js/data.js"></script>
+        <script src="./js/result.js"></script>
         <script src="./js/components.js"></script>
         <script src="./js/index.js"></script>
     </body>

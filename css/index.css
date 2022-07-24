@@ -7,13 +7,16 @@ nav {
     height: 10%;
 }
 
-#main {
+main {
     height: 90%;
+}
+
+#main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
 }
 
 #prompt {
@@ -31,6 +34,10 @@ nav {
 
 .generalSelect:hover {
     background-color: rgb(54, 54, 54);
+}
+
+.flog {
+    margin: 0px 30%;
 }
 
 /* Shadow root styles below */

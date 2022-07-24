@@ -60,6 +60,9 @@ async function main() {
         //Fade out
         await fade(both, 500);
     }
+
+    await fade($('#next'), 200);
+    calcResults(userData);
 }
 
 $('#init').on('click', main);
